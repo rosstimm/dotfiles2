@@ -1,0 +1,36 @@
+            - name: Semver Conventional Commits
+  # You may pin to the exact commit or the version.
+  # uses: ietf-tools/semver-action@d93d5fbbab3c2e2ec76b0d22abac50e8e853fcd2
+  uses: ietf-tools/semver-action@v1.10.0
+  with:
+    # GitHub Token
+    token: 
+    # The branch to use when fetching list of commits to compare against
+    branch: # optional, default is main
+    # Comma separated commit prefixes, used to bump Major version
+    majorList: # optional, default is 
+    # Comma separated commit prefixes, used to bump Minor version
+    minorList: # optional, default is feat, feature
+    # Comma separated commit prefixes, used to bump Patch version
+    patchList: # optional, default is fix, bugfix, perf, refactor, test, tests
+    # If set to true, will ignore patchList and count any commit as a Patch
+    patchAll: # optional, default is false
+    # A list of additional commit messages to parse in order to calculate semver.
+    additionalCommits: # optional
+    # Fallback tag to use if no latest tag is found.
+    fallbackTag: # optional, default is 
+    # Override the tag to use when comparing against the branch in order to fetch the list of commits.
+    fromTag: # optional, default is 
+    # Maximum number of tags to fetch from latest.
+    maxTagsToFetch: # optional, default is 10
+    # Whether to exit with an error, warning or silently when there are no new commits since the latest tag. (error, warn, current, silent)
+    noNewCommitBehavior: # optional, default is error
+    # Whether to exit with an error, warning or silently when none of the commits result in a version bump. (error, warn, current, patch, silent)
+    noVersionBumpBehavior: # optional, default is error
+    # A prefix that will be striped when parsing tags (e.g. `foobar/`). Any other prefix will be ignored. The prefix will be added back to the output values.
+    prefix: # optional, default is 
+    # If set to true, will skip tags that are not valid semver until it finds a proper one (up to maxTagsFetch from latest).
+    skipInvalidTags: # optional, default is false
+    # If defined, only tags matching the regex pattern will be included (e.g. `^[a-f0-9.]+$`). Use a negative lookahead match to exclude tags (e.g. `^(?!abcd).*$`). When used in conjunction with the prefix option, the prefix is striped first, then the filter is applied.
+    tagFilter: # optional, default is 
+          
