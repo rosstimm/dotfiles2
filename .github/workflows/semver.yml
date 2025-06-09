@@ -1,9 +1,10 @@
+on: [commit]
 jobs:
-  semantic-versioning:
+  runs-on: ubuntu-latest
     steps:
       # This step references the directory that contains the action.
       - name: Use local hello-world-action
-        uses: ./.github/actions/hello-world-action
+        uses: ./.github/actions/semver
 
       
 
