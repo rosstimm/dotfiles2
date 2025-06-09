@@ -31,6 +31,7 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end,
 })
 
+local job_id = 0
 -- Small Terminal
 -- Bind <space>st in normal mode
 -- Open new window
@@ -42,4 +43,10 @@ vim.keymap.set("n", "<space>st", function()
   vim.cmd.term()
   vim.cmd.wincmd("J")
   vim.api.nvim_win_set_height(0, 10)
+
+  job_id = vim.bo.channel
+end)
+
+vim.keymap.set("n", "<space>example", function()
+  vim.fn.chansend(job_id, { "ls -al\r\n" })
 end)
