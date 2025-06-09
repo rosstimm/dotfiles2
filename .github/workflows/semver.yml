@@ -21,6 +21,7 @@ jobs:
         uses: ncipollo/release-action@v1.16.0
         with:
           allowUpdates: true
+          tag: steps.semver.outputs.next
           draft: false
           makeLatest: true
           name: ${{ steps.semver.outputs.next }}
