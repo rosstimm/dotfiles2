@@ -14,7 +14,6 @@ return {
     },
     {
       "neovim/nvim-lspconfig",
-      ft = "rs",
       opts = {
         servers = {
           bacon_ls = {
