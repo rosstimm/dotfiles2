@@ -2,6 +2,10 @@ autoload -Uz compinit && compinit
 autoload -Uz vcs_info
 
 
+plugins=(git ssh-agent)
+eval "$(ssh-agent -s)"
+
+
 #
 TERM=kitty
 EDITOR=nvim
