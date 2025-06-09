@@ -1,6 +1,8 @@
 jobs:
   my_first_job:
     steps:
+      - name: My first step - check out repository
+        uses: actions/checkout@v4
       - name: Semver Conventional Commits
         uses: ietf-tools/semver-action@v1.9.0
      
