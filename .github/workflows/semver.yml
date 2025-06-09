@@ -4,6 +4,8 @@ jobs:
   semver:
     runs-on: ubuntu-latest
     steps:
+      - name: My first step - check out repository
+        uses: actions/checkout@v4
       - name: Use local hello-world-action
         uses: ./.github/actions/semver
       
