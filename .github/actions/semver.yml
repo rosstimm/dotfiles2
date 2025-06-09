@@ -1,0 +1,6 @@
+jobs:
+  my_first_job:
+    steps:
+      - name: Semver Conventional Commits
+        uses: ietf-tools/semver-action@v1.9.0
+     
