@@ -1,5 +1,8 @@
-name: Semantic Version
-on: [push]
 jobs:
-- name: Semver Conventional Commits
-  uses: ietf-tools/semver-action@v1.9.0
+  my_first_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Semver Conventional Commits
+        uses: ietf-tools/semver-action@v1.9.0
+      
+
