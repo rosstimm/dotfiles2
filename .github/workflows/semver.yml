@@ -1,8 +1,9 @@
 jobs:
-  my_first_job:
-    runs-on: ubuntu-latest
+  semantic-versioning:
     steps:
-      - name: Semver Conventional Commits
-        uses: ietf-tools/semver-action@v1.9.0
+      # This step references the directory that contains the action.
+      - name: Use local hello-world-action
+        uses: ./.github/actions/hello-world-action
+
       
 
