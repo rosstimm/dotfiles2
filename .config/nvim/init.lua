@@ -30,3 +30,16 @@ vim.api.nvim_create_autocmd('TermOpen', {
     vim.opt.relativenumber = false
   end,
 })
+
+-- Small Terminal
+-- Bind <space>st in normal mode
+-- Open new window
+-- Set new window to type term
+-- Move window to the bottom
+-- Set the height of the window
+vim.keymap.set("n", "<space>st", function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 10)
+end)
