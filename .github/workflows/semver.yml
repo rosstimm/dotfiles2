@@ -1,2 +1,5 @@
+name: Semantic Version
+on: [push]
+jobs:
 - name: Semver Conventional Commits
   uses: ietf-tools/semver-action@v1.9.0
